@@ -10,6 +10,12 @@ spring:
     url: jdbc:mysql://localhost:3306/cloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
+  zipkin: #<-------------------------------------关键
+    base-url: http://localhost:9411
+    sleuth: #<-------------------------------------关键
+      sampler:
+      #采样率值介于 0 到 1 之间，1 则表示全部采集
+      probability: 1
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
