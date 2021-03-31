@@ -1,0 +1,48 @@
+1.spring cloud
+           注册中心： Eureka （服务的注册与发现，服务管理） 
+	            zookeeper
+	            consul
+	            Nacos（建议使用）
+
+           服务调用：Ribbon  （提供服务调度算法，默认轮询算法）
+	            openfeign（建议使用，主要作用是注解加接口代替了ribbon+restTemplate）
+
+           服务降级：Hystrix（服务降级，熔断，限流）
+	           Sentinel（建议使用）
+
+           服务网关：Gateway（建议使用）
+	            Zuul
+
+           服务配置：config（全局配置，供各个服务使用）
+	            Nacos
+
+           服务总线：Bus （刷新全局配置，通知各个服务。与运维相关，修改一个配置，通知全部服务）
+	           Nacos
+
+           消息驱动：stream （相当都消息队列的适配器，分组防止重复消费）
+
+           分布式链路：Sleuth （配合zipkin监控链路跟踪）
+
+
+
+nacos相当于注册、配置的总和，可以AP与CP切换	            
+建议使用：spring cloud alibaba 
+			nacos、openfeign、gateway
+
+C:Consistency(强一致性)
+A:Availability(可用性)
+P:Partition tolerance(分区容错)
+AP(Eureka) CP(Zookeeper/Consul)
+
+两个服务之间调用，httpclient、webService、RestTemplate、rpc框架、ribbon、openfegin
+
+					JMeter（高并发测试工具）
+2.docker
+
+3.谷粒商城分布式电商项目
+
+4.Javascript
+
+5.Hadoop、kafka、spark
+
+6.实时数据计算
